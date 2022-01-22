@@ -7,7 +7,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-
 @SpringBootApplication
 @EnableJpaAuditing
 public class IshyigaTransilatorWithPostgresApplication {
@@ -16,16 +15,14 @@ public class IshyigaTransilatorWithPostgresApplication {
 		SpringApplication.run(IshyigaTransilatorWithPostgresApplication.class, args);
 	}
 	@Configuration
-    public class CorsConfig implements WebMvcConfigurer {
+	public class CorsConfig implements WebMvcConfigurer {
 
-        @Override
-        public void addCorsMappings(CorsRegistry registry) {
+		@Override
+		public void addCorsMappings(CorsRegistry registry) {
 
-            registry.addMapping("/**").allowedOrigins("*").allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD");
-                    
+			registry.addMapping("/**").allowedOrigins("*").allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD");
+		}
 
-        }
-
-    }
+	}
 
 }
