@@ -48,8 +48,8 @@ $(document).ready(function() {
                     '  </thead>' +
                     '  <tbody>' +
                     '';
+                cleanSelector();
                 let rows = translator.map(each => {
-                        cleanSelector();
                     $("#selectVariableName").append(`<option value="${each.v_name}">
                                        ${each.v_name}
                                   </option>`);
@@ -312,6 +312,7 @@ $(document).ready(function() {
                 "data": JSON.stringify(data)
             }).done(function(results){
                 sendMessage("Done");
+                fetchData()
                 console.log(results);
             });
         });
