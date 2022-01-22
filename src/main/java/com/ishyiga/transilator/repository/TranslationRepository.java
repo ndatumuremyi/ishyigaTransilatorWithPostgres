@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RepositoryRestResource(collectionResourceRel="translation", path="translator")
 @CrossOrigin(origins = "*")
-public interface TranslationRepository extends CrudRepository<Translation, Integer> {
+public interface TranslationRepository extends JpaRepository<Translation, Integer> {
 }
