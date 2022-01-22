@@ -1,5 +1,7 @@
 let translator =  undefined;
-
+let onlineURL = "https://ishyiga-variable-transilator.herokuapp.com/"
+let localURL = "http://localhost:8085/"
+let usingURL = onlineURL
 
 let language = undefined;
 
@@ -26,7 +28,7 @@ $(document).ready(function() {
     let fetchData = () =>{
         sendMessage("fetching...");
         $.get(
-            'http://localhost:8085/translator',
+            usingURL+'translator',
             "",
 
             function (response, status) {
@@ -82,7 +84,7 @@ $(document).ready(function() {
             if(variableN === "All" && language === "All"){
                 sendMessage("Fetching..");
                 $.get(
-                    'http://localhost:8085/translator',
+                    usingURL+'translator',
                     "",
 
                     function (response, status) {
@@ -129,7 +131,7 @@ $(document).ready(function() {
             else if(variableN=== "All" && language !== "All"){
                 sendMessage("Fetching...");
                 $.get(
-                    'http://localhost:8085/translator',
+                    usingURL+'translator',
                     "",
 
                     function (response, status) {
@@ -292,7 +294,7 @@ $(document).ready(function() {
             }
             sendMessage("Saving...");
             $.ajax({
-                "url": "http://localhost:8085/translator",
+                "url": usingURL+"translator",
                 "type": "post",
                 statusCode: {
                     409: function(responseObject, textStatus, jqXHR) {
