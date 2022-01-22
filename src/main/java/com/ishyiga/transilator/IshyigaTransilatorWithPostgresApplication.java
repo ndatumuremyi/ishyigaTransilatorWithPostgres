@@ -21,7 +21,7 @@ public class IshyigaTransilatorWithPostgresApplication {
         @Override
         public void addCorsMappings(CorsRegistry registry) {
 
-            registry.addMapping("/**").allowedOrigins("/**").allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD")
+            registry.addMapping("/**").allowedOrigins("*").allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD")
                     .allowCredentials(false);
 
         }
