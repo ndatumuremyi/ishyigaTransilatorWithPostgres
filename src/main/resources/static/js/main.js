@@ -237,11 +237,11 @@ $(document).ready(function() {
     $('#putData').click(e =>{
         let data = {
 
-            v_name: $("#exampleInputvariable").val(),
-            kinyarwanda:$("#exampleInputKinyarwanda").val(),
-            english:$("#exampleInputEnglish").val(),
-            french:$("#exampleInputFrench").val(),
-            kiswahili:$("#exampleInputKiswahili").val()
+            v_name: $("#exampleInputvariable").val().toLowerCase(),
+            kinyarwanda:$("#exampleInputKinyarwanda").val().toLowerCase(),
+            english:$("#exampleInputEnglish").val().toLowerCase(),
+            french:$("#exampleInputFrench").val().toLowerCase(),
+            kiswahili:$("#exampleInputKiswahili").val().toLowerCase()
         }
         let i;
         let link;
@@ -282,11 +282,11 @@ $(document).ready(function() {
         $('#postData').click(e =>{
 
             let data = {
-                v_name: $("#exampleInputvariable").val(),
-                kinyarwanda:$("#exampleInputKinyarwanda").val(),
-                english:$("#exampleInputEnglish").val(),
-                french:$("#exampleInputFrench").val(),
-                kiswahili:$("#exampleInputKiswahili").val()
+                v_name: $("#exampleInputvariable").val().toLowerCase(),
+                kinyarwanda:$("#exampleInputKinyarwanda").val().toLowerCase(),
+                english:$("#exampleInputEnglish").val().toLowerCase(),
+                french:$("#exampleInputFrench").val().toLowerCase(),
+                kiswahili:$("#exampleInputKiswahili").val().toLowerCase()
             }
             if(data.v_name === "" || data.kinyarwanda ===""||data.english === "" || data.french === "" || data.kiswahili === ""){
                 alert("fill all form input")
